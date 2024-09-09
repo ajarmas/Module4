@@ -1,3 +1,4 @@
+
 /*Andrew Armas. WEB 210 - Module 3*/
 
 /*
@@ -63,9 +64,17 @@ footer a:hover {
 
 /* HOME 
 ---------------------------*/
-.home {
+/*.home {
     background: url(../images/sharon-mccutcheon-unsplash.jpg) no-repeat;
     background-position: cover;
+}*/
+
+.home header::before {
+    background: url(../images/sharon-mccutcheon-unsplash.jpg) bottom;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 375px;
 }
 
 .home .content-wrapper {
@@ -78,20 +87,37 @@ footer a:hover {
     max-width: 900px;
 }
 
-/* Temporary size */
-section img {
-    width: 500px;
+.home-section {
+    margin-bottom: 50px;
 }
+
+.home-section h2 {
+    border-bottom: 2px dashed #772E25;
+}
+
 
 /* PROFILE 
 ---------------------------*/
 
-
+.download-link {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+}
 
 
 /* PROJECTS 
 ---------------------------*/
+.project-item {
+    display: flow-root;
+    margin: 30px 0;
+}
 
+.project-item img {
+    width: 500px;
+    float: left;
+    margin-right: 20px;
+}
 
 
 
