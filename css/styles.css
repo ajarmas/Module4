@@ -1,0 +1,129 @@
+/*Andrew Armas. WEB 210 - Module 3*/
+
+/*
+Color Palette
+
+Dark Slate Green    #283d3b
+Caribbean Current   #197278
+Cream               #fbf5ee
+Bright Red          #c44536
+Burgundy            #772E25
+*/
+
+/* GLOBAL STYLES
+-------------------------- */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+
+
+body {
+    background: #fbf5ee;
+    margin: 0;
+}
+
+/* links */
+a {
+    color: #197278;
+}
+
+a:hover {
+    color: #c44536;
+    text-decoration: none;
+}
+
+footer a {
+    color: #fbf5ee;
+}
+
+footer a:hover {
+    color: #c44536;
+    text-decoration: none;
+}
+
+.btn {
+    background: #283d3b;
+    color: #fbf5ee;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #772E25;
+    color: #fbf5ee;
+}
+
+/* HOME 
+---------------------------*/
+.home {
+    background: url(../images/sharon-mccutcheon-unsplash.jpg) no-repeat;
+    background-position: cover;
+}
+
+.home .content-wrapper {
+    background: rgb(255 255 255 / 0.9);
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 900px;
+}
+
+/* Temporary size */
+section img {
+    width: 500px;
+}
+
+/* PROFILE 
+---------------------------*/
+
+
+
+
+/* PROJECTS 
+---------------------------*/
+
+
+
+
+/* WORK EXPERIENCE 
+---------------------------*/
+
+
+
+
+/* EDUCATION 
+---------------------------*/
+
+
+
+
+/* FOOTER 
+---------------------------*/
+footer {
+    background: #283d3b;
+    color: #fbf5ee;
+}
+
+.socials {
+    list-style-type: none;
+    padding: 0;
+}
+
+.socials li {
+    display: inline-block;   
+}
+
+.socials img {
+    width: 32px;
+}
+
