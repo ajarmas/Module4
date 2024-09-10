@@ -1,4 +1,3 @@
-
 /*Andrew Armas. WEB 210 - Module 3*/
 
 /*
@@ -16,6 +15,7 @@ Burgundy            #772E25
 
 html {
     box-sizing: border-box;
+    font-size: 62.5%; /*setting default to 10px*/
 }
 
 *, *:before, *:after {
@@ -30,6 +30,42 @@ html, body {
 body {
     background: #fbf5ee;
     margin: 0;
+    font-family: "Outfit", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+h1, h2 {
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 6rem;
+    line-height: 1;
+    /*Background Effect from https://www.letsbuildui.dev/articles/css-text-effects-five-minimal-examples/ */
+    background: linear-gradient(to right, #197278 40%, #772E25 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 55%;
+    color: transparent;
+}
+
+h2 {
+    font-size: 3.6rem;
+    color: #283d3b;
+}
+
+h2:first-child {
+    color:#197278;
+}
+
+h3 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 0.5;
+    color: #c44536;
 }
 
 /* links */
@@ -41,6 +77,8 @@ a:hover {
     color: #c44536;
     text-decoration: none;
 }
+
+
 
 footer a {
     color: #fbf5ee;
@@ -55,11 +93,19 @@ footer a:hover {
     background: #283d3b;
     color: #fbf5ee;
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    display: inline-block;
+    padding: 7px;
+    letter-spacing: .05em;
+    line-height: 1;
+    border-radius: 10px;
 }
 
 .btn:hover {
     background: #772E25;
     color: #fbf5ee;
+    box-shadow: 0 4px 15px #19727880;
 }
 
 /* HOME 
@@ -103,6 +149,7 @@ footer a:hover {
     position: fixed;
     top: 5px;
     left: 5px;
+    font-size: 1.6rem;
 }
 
 
@@ -117,19 +164,41 @@ footer a:hover {
     width: 500px;
     float: left;
     margin-right: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
 
 /* WORK EXPERIENCE 
 ---------------------------*/
+.work-details h3 {
+    margin-bottom: 20px;
+}
 
+.work-details p {
+    margin: 0;
+}
 
+.work-duties p {
+    margin: 5px 0;
+    text-decoration: underline;
+   
+}
+
+.work-duties ul {
+    margin: 0;
+}
 
 
 /* EDUCATION 
 ---------------------------*/
+.education-item h3 {
+    margin: 30px 0 12px 0 
+}
 
+.education-item p {
+    margin: 0;
+}
 
 
 
@@ -137,6 +206,10 @@ footer a:hover {
 ---------------------------*/
 footer {
     background: #283d3b;
+    color: #fbf5ee;
+}
+
+#footer-header {
     color: #fbf5ee;
 }
 
@@ -152,4 +225,3 @@ footer {
 .socials img {
     width: 32px;
 }
-

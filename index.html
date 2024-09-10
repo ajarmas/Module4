@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Andrew J. Armas | Portfolio </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   
@@ -62,20 +65,26 @@
 
         <!-- Copy this whole <section> block to add more jobs. -->
         <section>
-          <h3>Production Supervisor</h3>
-          <p>Martin Marietta Center for the Performing Arts</p>
-          <p>January 2023 - Present</p>
-          <!---Might add later. <p>Job summary goes here. Add as many paragraphs as you need.</p> -->
-          <p>Job Duties:</p>
-          <ul>
-            <li>Plan, coordinate, and oversee event logistics.</li>
-            <li>Meets with clients to determine event requirements; equipment, support staff, scheduling, production, and security needs.</li>
-            <li>Prepare and maintain records, contracts, drawings, timesheets, invoices, and related event records and documents.</li>
-            <li>Prepare cost estimates, and assist in the timely and accurate completion of billing.</li>
-            <li>Schedule all necessary staff including both internal and 3rd party staffing requirements.</li>
-            <li>Manage, schedule, and assist in the training of staff (+70 stagehands) to help grow their skills as needed.</li>
-            <li>Monitor and maintain City of Raleigh equipment, supplies, and materials inventories.</li>
-          </ul>
+          <div class="work-details">
+            <h3>Production Supervisor</h3>
+            <p>Martin Marietta Center for the Performing Arts</p>
+            <p>January 2023 - Present</p>
+            <!---Might add later. <p>Job summary goes here. Add as many paragraphs as you need.</p> -->
+          </div>
+
+          <div class="work-duties">
+            <p>Job Duties:</p>
+              <ul>
+                <li>Plan, coordinate, and oversee event logistics.</li>
+                <li>Meets with clients to determine event requirements; equipment, support staff, scheduling, production, and security needs.</li>
+                <li>Prepare and maintain records, contracts, drawings, timesheets, invoices, and related event records and documents.</li>
+                <li>Prepare cost estimates, and assist in the timely and accurate completion of billing.</li>
+                <li>Schedule all necessary staff including both internal and 3rd party staffing requirements.</li>
+                <li>Manage, schedule, and assist in the training of staff (+70 stagehands) to help grow their skills as needed.</li>
+                <li>Monitor and maintain City of Raleigh equipment, supplies, and materials inventories.</li>
+              </ul>
+          </div>
+
         </section>
         <!-- End of Job block. -->
       </section>
@@ -85,19 +94,19 @@
         <h2>Education</h2>
 
         <!-- Copy this whole <section> block to add more schools. -->
-        <section>
+        <section class="education-item">
           <h3>Wake Technical Community College - Raleigh, NC</h3>
           <p>AAS in Graphic Design & Advertising, 2019-2025</p>
           <p>Summary or accomplishments.</p>
         </section>
 
-        <section>
+        <section class="education-item">
           <h3>Southern Illinois University - Carbondale, IL</h3>
           <p>MFA in Theater; Technical Direction, 2015-2018</p>
           <p>Summary or accomplishments.</p>
         </section>
 
-        <section>
+        <section class="education-item">
           <h3>Florida Atlantic University - Boca Raton, FL</h3>
           <p>BA in Theater Design & Technology, 2011-2015</p>
           <p>Summary or accomplishments.</p>
@@ -109,7 +118,7 @@
 
       <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
       <footer>
-        <h2>Let's Keep in Touch!</h2>
+        <h2 id="footer-header">Let's Keep in Touch!</h2>
 
         <!-- Social media and contact links. Add or remove any networks. -->
         <ul class="socials">
