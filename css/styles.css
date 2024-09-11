@@ -10,7 +10,7 @@ Bright Red          #c44536
 Burgundy            #772E25
 */
 
-/* GLOBAL STYLES
+/* GLOBAL STYLES (GS)
 -------------------------- */
 
 html {
@@ -35,24 +35,25 @@ body {
     line-height: 1.4;
 }
 
+/*GS-Headers*/
 h1, h2 {
     font-family: "Josefin Sans", sans-serif;
     margin: 0;
 }
 
 h1 {
-    font-size: 6rem;
+    font-size: 6.5rem;
     line-height: 1;
     /*Background Effect from https://www.letsbuildui.dev/articles/css-text-effects-five-minimal-examples/ */
     background: linear-gradient(to right, #197278 40%, #772E25 70%);
     background-clip: text;
     -webkit-background-clip: text;
-    background-size: 55%;
+    background-size: 60%;
     color: transparent;
 }
 
 h2 {
-    font-size: 3.6rem;
+    font-size: 3.8rem;
     color: #283d3b;
 }
 
@@ -63,12 +64,12 @@ h2:first-child {
 h3 {
     font-family: "Outfit", sans-serif;
     font-weight: 600;
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     line-height: 0.5;
     color: #c44536;
 }
 
-/* links */
+/*GS-links*/
 a {
     color: #197278;
 }
@@ -78,8 +79,7 @@ a:hover {
     text-decoration: none;
 }
 
-
-
+/*GS-footer*/
 footer a {
     color: #fbf5ee;
 }
@@ -89,6 +89,7 @@ footer a:hover {
     text-decoration: none;
 }
 
+/*GS-Button*/
 .btn {
     background: #283d3b;
     color: #fbf5ee;
@@ -110,10 +111,12 @@ footer a:hover {
 
 /* HOME 
 ---------------------------*/
-/*.home {
-    background: url(../images/sharon-mccutcheon-unsplash.jpg) no-repeat;
-    background-position: cover;
-}*/
+header .content-wrapper {
+    padding-bottom: 20px;
+    border-bottom-style: double;
+    border-color: #772E25;
+    border-width: 8px
+}
 
 .home header::before {
     background: url(../images/sharon-mccutcheon-unsplash.jpg) bottom;
@@ -123,11 +126,8 @@ footer a:hover {
     height: 375px;
 }
 
-.home .content-wrapper {
-    background: rgb(255 255 255 / 0.9);
-}
-
 .content-wrapper {
+    background: rgb(255 255 255 / 0.9);
     margin: 0 auto;
     padding: 30px;
     max-width: 900px;
@@ -157,7 +157,11 @@ footer a:hover {
 ---------------------------*/
 .project-item {
     display: flow-root;
-    margin: 30px 0;
+    margin: 40px 0;
+}
+
+.project-item:first-of-type {
+    margin-top: 0px;
 }
 
 .project-item img {
@@ -168,11 +172,10 @@ footer a:hover {
 }
 
 
-
 /* WORK EXPERIENCE 
 ---------------------------*/
 .work-details h3 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .work-details p {
@@ -182,7 +185,6 @@ footer a:hover {
 .work-duties p {
     margin: 5px 0;
     text-decoration: underline;
-   
 }
 
 .work-duties ul {
@@ -200,6 +202,9 @@ footer a:hover {
     margin: 0;
 }
 
+.education-item p:first-of-type {
+    font-weight: 700;
+}
 
 
 /* FOOTER 
