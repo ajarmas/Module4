@@ -23,12 +23,13 @@ html {
 }
 
 html, body {
-    height: 100%;
+    min-height: 100%;
 }
 
 
 body {
-    background: #fbf5ee;
+    background: linear-gradient(to bottom, #fbf5ee 40% , #197278 );
+    background-attachment: scroll;
     margin: 0;
     font-family: "Outfit", sans-serif;
     font-size: 1.5rem;
@@ -51,7 +52,8 @@ body {
     padding: 14px 16px;
     text-decoration: none;
   }
-  
+ 
+
   .dropdown {
     float: left;
     overflow: hidden;
@@ -79,6 +81,7 @@ body {
   .dropdown-content {
     display: none;
     position: absolute;
+    border-radius: 0 0 10px 10px;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -95,7 +98,10 @@ body {
   }
   
   .dropdown-content a:hover {
+    color: #c44536;
     background-color: #ddd;
+    border-radius: 0 0 10px 10px;
+    font-weight: bold;
   }
   
   .dropdown:hover .dropdown-content {
@@ -137,15 +143,29 @@ h3 {
     color: #c44536;
 }
 
+@media screen and (max-width:569px) {
+    .home header::before {
+        height: 200px;
+    }
+    
+    h1 {
+        font-size: 4rem;
+        padding-bottom: 10px;
+    }
+    h2 {
+        font-size: 2.8rem;
+        line-height: 1;
+    }
+    h3 {
+        line-height: 1;
+    }
+}
+
 /*GS-links*/
 a {
     color: #197278;
 }
 
-a:hover {
-    color: #c44536;
-    text-decoration: none;
-}
 
 /*GS-footer*/
 footer a {
@@ -179,15 +199,21 @@ footer a:hover {
 
 /* HOME 
 ---------------------------*/
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
 header .content-wrapper {
     padding-bottom: 20px;
     border-bottom-style: double;
     border-color: #772E25;
-    border-width: 8px
+    border-width: 8px;
+    flex: 1 0 auto;
 }
 
 .home header::before {
-    background: url(../images/sharon-mccutcheon-unsplash.jpg) bottom;
+    background: url(../images/kai-dahms-97yTozZh7N8-unsplash\ edited.jpg) bottom;
     background-size: cover;
     content: "";
     display: block;
@@ -195,7 +221,7 @@ header .content-wrapper {
 }
 
 .content-wrapper {
-    background: rgb(255 255 255 / 0.9);
+    background: rgb(255 255 255 / 0.95);
     margin: 0 auto;
     padding: 30px;
     max-width: 900px;
@@ -209,6 +235,12 @@ header .content-wrapper {
     border-bottom: 2px dashed #772E25;
 }
 
+.home-section a:first-child:hover {
+    color: #c44536;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 
 /* PROFILE 
 ---------------------------*/
@@ -220,11 +252,30 @@ header .content-wrapper {
     font-size: 1.6rem;
 }
 
+@media screen and (max-width:1330px) {
+    .download-link {
+        position: absolute;
+    }
+}
+
+@media screen and (min-width:488px) and (max-width:772px) {
+    .download-link {
+        position: absolute;
+        top: 110px;
+    }
+}
+
+@media screen and (max-width:487px) {
+    .download-link {
+        position: absolute;
+        top: 155px;
+    }
+}
+
 
 /* PROJECTS 
 ---------------------------*/
 .project-item {
-    display: flow-root;
     margin: 40px 0;
 }
 
@@ -234,19 +285,59 @@ header .content-wrapper {
 
 .project-item img {
     width: 500px;
-    float: left;
-    margin-right: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (min-width:880px) {
+    .project-item {
+        display: flow-root;
+    }
+    .project-item img {
+        float: left;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (min-width:655px) and (max-width:879px) {
+    .project-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+    .project-item img {
+        width: 100%;
+    }
+    .project-item {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:654px) {
+    .project-item img {
+        width: 100%;
+    }
 }
 
 
 /* WORK EXPERIENCE 
 ---------------------------*/
+
+
 .work-details h3 {
     margin-bottom: 15px;
 }
 
 .work-details p {
+    margin: 0;
+}
+
+.work-duties {
+margin-top: 20px;
+}
+
+.work-duties h4 {
+    text-decoration: underline;
     margin: 0;
 }
 
@@ -257,6 +348,14 @@ header .content-wrapper {
 
 .work-duties ul {
     margin: 0;
+}
+
+@media screen and (min-width:790px) {
+    .work-items {
+        display: grid;
+        grid-template-columns: 325px 1fr;
+        column-gap: 15px;
+    }
 }
 
 
@@ -280,10 +379,16 @@ header .content-wrapper {
 footer {
     background: #283d3b;
     color: #fbf5ee;
+    border-top: 5px solid #c44536;
+  
 }
 
 #footer-header {
     color: #fbf5ee;
+}
+
+#footer-header {
+    font-size: large;
 }
 
 .socials {
@@ -292,9 +397,29 @@ footer {
 }
 
 .socials li {
-    display: inline-block;   
+    display: inline-block;
+    margin-left: 10px;
 }
 
 .socials img {
     width: 32px;
+}
+
+.socials img:hover {
+    opacity: 0.75;
+}
+
+@media screen and (min-width:715px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width:714px) {
+    footer {
+        text-align: center;
+        padding: 10px;
+    }
 }
